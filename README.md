@@ -6,7 +6,7 @@ Have you ever felt frustrated when connecting to MySQL of a magento project? I m
 `cat app/etc/env.php` to print the entire env on the screen. Then manually scavenge the hostname, username, password, and database from the output,
 save it onto a temporary file, and then finally build your `mysql -h...` command. Too much work. Amirite?
 
-Well not anymore! Introducting the `magento-db-connector` (patent pending). Using this tool connecting to the 
+Well not anymore! Introducing the `magento-db-connector` (patent pending). Using this tool connecting to the 
 right MySQL database of a Magento project is as easy as 1, 2, 3...literally!
 
 ## Steps to use
