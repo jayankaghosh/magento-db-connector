@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+###################################
+# Made with l<3ve by j0y
+# https://github.com/jayankaghosh
+###################################
+
+php_var=/usr/bin/php
+
+get_script_dir() {
+    echo $(dirname "$0")
+}
+
+get_env_file_path() {
+    envFile=$(get_script_dir)
+    envFile+="/../app/etc/env.php"
+    echo $envFile
+}
+
+get_env_db_param() {
+    echo $($php_var -r "\$r=require_once(\"$(get_env_file_path)\");echo \$r['db']['connection']['default']['$1'];")
+}
+
+get_error_message() {
+    echo "Error while executing mysql"
+    echo "Error while executing mysql"
+}
+
+host=$(get_env_db_param "host")
+username=$(get_env_db_param "username")
+password=$(get_env_db_param "password")
+dbname=$(get_env_db_param "dbname")
+
+mysql -h $host -u $username -p$password $dbname || echo get_error_message
