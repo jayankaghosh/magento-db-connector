@@ -23,7 +23,6 @@ get_env_db_param() {
 
 get_error_message() {
     echo "Error while executing mysql"
-    echo "Error while executing mysql"
 }
 
 host=$(get_env_db_param "host")
